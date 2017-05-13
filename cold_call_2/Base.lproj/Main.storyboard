@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cold_call_2" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +21,61 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WeF-C6-6Ps">
+                                <rect key="frame" x="126" y="463" width="122" height="51"/>
+                                <color key="backgroundColor" red="0.55862786800132702" green="0.71406639053627119" blue="0.93743928108808294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="2mK-OZ-tJd"/>
+                                    <constraint firstAttribute="width" constant="122" id="9Af-2T-8Yb"/>
+                                </constraints>
+                                <color key="tintColor" red="0.61557175460000002" green="0.75035335690000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="1" green="0.99711844320842169" blue="0.97822699178945427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="coldButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fJ6-Cg-UKj"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjD-cP-LwC">
+                                <rect key="frame" x="93" y="280" width="188" height="106"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmW-NW-5KW">
+                                <rect key="frame" x="108" y="65" width="158" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="0Lb-rk-Ue7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92589992396209431" green="0.990019759338437" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.08297884906355954" green="0.097858646373056968" blue="0.075582712181226114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dmW-NW-5KW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="05z-sk-mLW"/>
+                            <constraint firstItem="HjD-cP-LwC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0Cg-ia-CJe"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="WeF-C6-6Ps" secondAttribute="bottom" constant="153" id="2cF-TL-seT"/>
+                            <constraint firstItem="dmW-NW-5KW" firstAttribute="centerX" secondItem="HjD-cP-LwC" secondAttribute="centerX" id="O2u-Bk-fnY"/>
+                            <constraint firstItem="HjD-cP-LwC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="77" id="Tah-Dh-d4t"/>
+                            <constraint firstItem="HjD-cP-LwC" firstAttribute="centerX" secondItem="WeF-C6-6Ps" secondAttribute="centerX" id="Tbg-fG-jod"/>
+                            <constraint firstItem="dmW-NW-5KW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="45" id="c8H-JE-i44"/>
+                            <constraint firstItem="WeF-C6-6Ps" firstAttribute="top" secondItem="HjD-cP-LwC" secondAttribute="bottom" constant="77" id="ddO-ix-56e"/>
+                            <constraint firstItem="dmW-NW-5KW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="92" id="joZ-gz-Nx9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="dmW-NW-5KW" id="0KX-5x-2FG"/>
+                        <outlet property="numberLabel" destination="HjD-cP-LwC" id="a6S-Vr-soy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-188" y="44.527736131934034"/>
         </scene>
     </scenes>
 </document>
